@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snoopy 🍓</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #fff0f5 100%);
+            --glass-bg: rgba(255, 255, 255, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.9);
+            --text-color: #6c5ce7;
+            --text-dark: #574b90;
+            --soft-pink-shadow: rgba(255, 182, 193, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            font-family: 'Quicksand', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Cartão Central Estilo Vidro Fosco */
+        .main-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2px solid var(--glass-border);
+            border-radius: 40px;
+            padding: 40px;
+            max-width: 860px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(220, 180, 210, 0.25);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #fff0f5;
+            color: #ff6b81;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            border: 1px solid #ffccd5;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            color: var(--text-dark);
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        /* Imagens Soft */
+        .img-card {
+            border-radius: 28px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 25px var(--soft-pink-shadow);
+            object-fit: cover;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            width: 100%;
+        }
+
+        .img-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(255, 107, 129, 0.25);
+        }
+
+        /* Imagem Principal */
+        .destaque-container {
+            margin-bottom: 25px;
+        }
+
+        .img-destaque {
+            height: 380px;
+            display: block;
+        }
+
+        /* Galeria em Grid */
+        .div-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .img-pequena {
+            height: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main-card">
+        <header>
+            <span class="badge">SNOOPY COLLECTION</span>
+            <h1>sweet moments 🍓</h1>
+        </header>
+
+        <section class="destaque-container">
+            <img class="img-card img-destaque" src="F3.jpg" alt="Snoopy em destaque">
+        </section>
+
+        <section class="div-images">
+            <img class="img-card img-pequena" src="F1.jpg" alt="Snoopy foto 1">
+            <img class="img-card img-pequena" src="F2.jpg" alt="Snoopy foto 2">
+            <img class="img-card img-pequena" src="F4.jpg" alt="Snoopy foto 4">
+        </section>
+    </main>
+</body>
+</html>
